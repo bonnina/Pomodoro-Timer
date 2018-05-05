@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Pomodoro Clock</title>
+      <meta content-type="text/html" charset="UTF-8"> 
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Barrio|Economica" rel="stylesheet">
+	  <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="contained fluid text-center">
+      <h1>pomodoro clock</h1>
+      <div class="buttons">
+        <button id="start" data-toggle="tooltip" title="Start"><i class="fa fa-play-circle fa-3x"></i></button>
+        <button id="reset" data-toggle="tooltip" title="Reset"><i class="fa fa-refresh fa-3x"></i></button>
+        <button id="about" data-toggle="tooltip" title="About pomodoro"><i class="fa fa-question-circle fa-3x"></i></button>
+      </div>
+      <div class="transpArea">
+        <div class="row">
+          <div class="col-sm-6" id="colW">
+            <h2 id="work">WORK</h2>
+            <div class="btn" id="wp"><i class="fa fa-plus fa-2x"> </i></div>
+            <p id="wClock">25:00</p>
+            <div class="btn" id="wm"><i class="fa fa-minus fa-2x"> </i></div>
+          </div>
+          <div class="col-sm-6" id="colR">
+            <h2 id="break">BREAK</h2>
+            <div class="btn" id="bp"><i class="fa fa-plus fa-2x"> </i></div>
+            <p id="rClock">5:00</p>
+            <div class="btn" id="bm"><i class="fa fa-minus fa-2x"> </i></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer"> </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="script.js"></script>
+  </body>
+</html>
