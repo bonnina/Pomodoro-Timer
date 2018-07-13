@@ -10,7 +10,9 @@ body {
 button {
   background-color: transparent;
   border: none;
-  outline: none;
+  /*
+  leave the outline for the use of assistive technology
+  */
 }
 
 h1{
@@ -42,6 +44,10 @@ p {
   padding: 10px;
 }
 
+.fa:focus {
+  color: black;
+}
+
 .transpArea {
   margin-top: 20px;
   display: block;
@@ -51,8 +57,4 @@ p {
   height: 250px;
   background-color: rgba(214, 214, 194, 0.3);
 /*  border-radius: 20px; */
-}
-
-i {
-  aria-hidden="true"
 }
