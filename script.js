@@ -47,15 +47,17 @@ $(function() {
             }
       }
       
-        $("#reset").click(() => {
-          clearInterval(i);
-          $(".btn").removeClass("disabled");
-          $('#start').removeAttr('disabled');
-          work = 25;
-          brk = 5;
-          show(work, "#wClock");
-          show(brk, "#rClock");
-          $("#colR, #colW").css({'background-color' : 'transparent'});
+        $("#reset").bind("keydown click", function() {
+          if (event.which !== 9 && event.which !== 16) {
+            clearInterval(i);
+            $(".btn").removeClass("disabled");
+            $('#start').removeAttr('disabled');
+            work = 25;
+            brk = 5;
+            show(work, "#wClock");
+            show(brk, "#rClock");
+            $("#colR, #colW").css({'background-color' : 'transparent'});
+	  }
         });
       }, 1000);
     }
@@ -65,27 +67,45 @@ $(function() {
     $("#colW").css({'background-color' : 'rgba(242, 242, 242, 0.4'});
   }
   
-  $("#start").click(timer);
-  $("#about").click(() => {
-    window.open("https://en.wikipedia.org/wiki/Pomodoro_Technique");
-    return false;
+  $("#start").bind("keydown click", function() {
+  //  event.preventDefault();
+    if (event.which !== 9 && event.which !== 16) timer();
   });
-  $("#wp").click(() => {
-    work++;
-    show(work, "#wClock");
+	
+  $("#about").bind("keydown click", () => {
+    if (event.which !== 9 && event.which !== 16) {
+      window.open("https://en.wikipedia.org/wiki/Pomodoro_Technique");
+      return false;
+    }
   });
-  $("#wm").click(() => {
-    work--;
-    if (work < 1) work = 1;
-    show(work, "#wClock");
+	
+  $("#wp").bind("keydown click", () => {
+    if (event.which !== 9 && event.which !== 16) {
+      work++;
+      show(work, "#wClock");
+    }
   });
-  $("#bp").click(() => {
-    brk++;
-    show(brk, "#rClock");
+	
+  $("#wm").bind("keydown click", () => {
+    if (event.which !== 9 && event.which !== 16) {
+      work--;
+      if (work < 1) work = 1;
+      show(work, "#wClock");
+    }
   });
-  $("#bm").click(() => {
-    brk--;
-    if (brk < 1) brk = 1;
-    show(brk, "#rClock");
+	
+  $("#bp").bind("keydown click", () => {
+    if (event.which !== 9 && event.which !== 16) {
+      brk++;
+      show(brk, "#rClock");
+    }
+  });
+	
+  $("#bm").bind("keydown click", () => {
+    if (event.which !== 9 && event.which !== 16) {
+      brk--;
+      if (brk < 1) brk = 1;
+      show(brk, "#rClock");
+    }
   });
 })
