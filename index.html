@@ -15,23 +15,23 @@
     <div class="contained fluid text-center">
       <h1>pomodoro clock</h1>
       <div class="buttons">
-        <button id="start" data-toggle="tooltip" title="Start" accesskey="s"><i class="fa fa-play-circle fa-3x"></i></button>
-        <button id="reset" data-toggle="tooltip" title="Reset" accesskey="r"><i class="fa fa-refresh fa-3x"></i></button>
-        <button id="about" data-toggle="tooltip" title="About pomodoro" accesskey="a"><i class="fa fa-question-circle fa-3x"></i></button>
+        <button id="start" data-toggle="tooltip" title="Start" accesskey="s" aria-label="Start"><i class="fa fa-play-circle fa-3x"></i></button>
+        <button id="reset" data-toggle="tooltip" title="Reset" accesskey="r" aria-label="Reset"><i class="fa fa-refresh fa-3x"></i></button>
+        <button id="about" data-toggle="tooltip" title="About pomodoro" accesskey="a" aria-label="About pomodoro"><i class="fa fa-question-circle fa-3x"></i></button>
       </div>
       <div class="transpArea">
         <div class="row">
           <div class="col-sm-6" id="colW">
-            <h2 id="work">WORK</h2>
-            <div class="btn" id="wp" data-toggle="tooltip" title="more"><i class="fa fa-plus fa-2x"> </i></div>
-            <p id="wClock">25:00</p>
-            <div class="btn" id="wm" data-toggle="tooltip" title="less"><i class="fa fa-minus fa-2x"> </i></div>
+            <h2 id="work" tabindex="0">WORK</h2>
+            <div class="btn" id="wp" data-toggle="tooltip" title="more" role="button" tabindex="0" aria-label="plus 1 minute of work"><i class="fa fa-plus fa-2x"> </i></div>
+            <p id="wClock" tabindex="0" aria-label="current work time">25:00</p>
+            <div class="btn" id="wm" data-toggle="tooltip" title="less"  role="button" tabindex="0" aria-label="minus 1 minute of work"><i class="fa fa-minus fa-2x"> </i></div>
           </div>
           <div class="col-sm-6" id="colR">
-            <h2 id="break">BREAK</h2>
-            <div class="btn" id="bp" id="wp" data-toggle="tooltip" title="more"><i class="fa fa-plus fa-2x"> </i></div>
-            <p id="rClock">5:00</p>
-            <div class="btn" id="bm" data-toggle="tooltip" title="less"><i class="fa fa-minus fa-2x"> </i></div>
+            <h2 id="break" tabindex="0">BREAK</h2>
+            <div class="btn" id="bp" id="wp" data-toggle="tooltip" title="more" role="button" tabindex="0" aria-label="plus 1 minute of rest"><i class="fa fa-plus fa-2x"> </i></div>
+            <p id="rClock" tabindex="0" aria-label="current rest time">5:00</p>
+            <div class="btn" id="bm" data-toggle="tooltip" title="less" role="button" tabindex="0" aria-label="minus 1 minute of rest"><i class="fa fa-minus fa-2x"> </i></div>
           </div>
         </div>
       </div>
